@@ -6,6 +6,10 @@
   "scripts": {
     "test": "wdio"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atvho/staff_wdio.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
