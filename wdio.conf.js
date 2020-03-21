@@ -20,7 +20,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './specs/**/staff_login_po.js'
+        './specs/**/staff_menu_individual_po.js'
     ],
     // Patterns to exclude.
     exclude: [

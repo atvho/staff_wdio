@@ -1,10 +1,10 @@
 import {LoginSelectors} from './fragments';
 
 export class LoginPage extends LoginSelectors{
-    constructor(){
+    constructor(email, password){
         super();
-        this.email = 'alexey.dubchak+autosilent90988@staff.dev';
-        this.password = 123456;
+        this.email = email;
+        this.password = password;
     }
 
     signin(){
@@ -15,7 +15,7 @@ export class LoginPage extends LoginSelectors{
         signinButton.click();
     }
 
-    visibility(){
+    visibilityLogin(){
         const emailField = this.emailField;
             browser.waitUntil(function(){
                 return emailField.isDisplayed()

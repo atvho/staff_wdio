@@ -2,11 +2,11 @@ import assert from 'assert';
 import {LoginPage} from '../pageObj';
 
 describe('Login with credentials', function(){
-        const loginPage = new LoginPage();
+        const loginPage = new LoginPage('alexey.dubchak+autosilent90988@staff.dev', 123456);
 
     it('should log in with valid credentials', function(){
         loginPage.signin();
-        loginPage.visibility();
+        loginPage.visibilityLogin();
         loginPage.login();
         const dashboardMenu = $('button[aria-label="Dashboard"] > span');
             browser.waitUntil(function(){
