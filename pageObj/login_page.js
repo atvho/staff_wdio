@@ -6,6 +6,15 @@ export class LoginPage extends LoginSelectors{
         this.email = 'alexey.dubchak+autosilent90988@staff.dev';
         this.password = 123456;
     }
+
+    signin(){
+        const signinButton = this.signinButton;
+            browser.waitUntil(function(){
+                return signinButton.isDisplayed()
+            }, 4000, 'Signin button is not rendered');
+        signinButton.click();
+    }
+
     visibility(){
         const emailField = this.emailField;
             browser.waitUntil(function(){
