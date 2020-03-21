@@ -5,7 +5,6 @@ describe('Login with credentials', function(){
         const loginPage = new LoginPage();
 
     it('should log in with valid credentials', function(){
-        browser.url('https://staff.com');
         const signin = $('.user.pull-right b');
         signin.click();
         loginPage.visibility();

@@ -2,7 +2,6 @@ const assert = require('assert');
 
 describe('Login with credentials', function(){
     it('should log in with valid credentials', function(){
-        browser.url('https://staff.com');
         const signin = $('.user.pull-right b');
         signin.click();
         const email = 'alexey.dubchak+autosilent90988@staff.dev';
