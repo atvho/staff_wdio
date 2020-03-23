@@ -1,4 +1,4 @@
-import assert from 'assert';
+import {assert} from 'chai';
 import {LoginPage} from '../pageObj';
 
 describe('Login with credentials', function(){
