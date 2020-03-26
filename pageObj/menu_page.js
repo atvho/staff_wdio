@@ -18,4 +18,11 @@ export class MenuPage extends MenuSelectors {
             }, 7000, 'Individual menu is not rendered');
     dashboardIndividualButton.click();
     }
+    screencastsMenu(){
+        const screencastsButton = this.screencastsButton;
+            browser.waitUntil(function(){
+                return screencastsButton.isDisplayed()
+            }, 7000, 'Screencasts menu is not rendered');
+    screencastsButton.click();    
+    }
 }

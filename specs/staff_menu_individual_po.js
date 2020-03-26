@@ -1,6 +1,5 @@
 import {assert} from 'chai';
-import {LoginPage} from '../pageObj';
-import {MenuPage} from '../pageObj';
+import {LoginPage, MenuPage} from '../pageObj';
 
 describe('Checking Menu pages', function(){
         const loginPage = new LoginPage('alexey.dubchak+autosilent90988@staff.dev', 123456);
@@ -13,7 +12,15 @@ describe('Checking Menu pages', function(){
         menuPage.dashboardMenu();
         menuPage.dashboardMenuIndividual();
         const currentUrl = browser.getUrl();
-        assert.strictEqual(currentUrl, 'https://app.staff.com/#/dashboard-individual');
-        
+        assert.strictEqual(currentUrl, 'https://app.staff.com/#/dashboard-individual'); 
+    })
+    
+    it('should check screencasts menu', function(){
+        // loginPage.signin();
+        // loginPage.visibilityLogin();
+        // loginPage.login();
+        menuPage.screencastsMenu();
+        const currentUrl = browser.getUrl();
+        assert.strictEqual(currentUrl, 'https://app.staff.com/new/screencasts', 'Incorrect URL'); 
     })
 })
