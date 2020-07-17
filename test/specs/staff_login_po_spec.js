@@ -2,12 +2,14 @@ import {assert} from 'chai';
 import {LoginPage} from '../pageObj';
 
 describe('Login with credentials', function(){
-        const loginPage = new LoginPage('alexey.dubchak+autosilent90988@staff.dev', 123456);
+        const loginPage = new LoginPage();
 
     it('should log in with valid credentials', function(){
+        const email = 'alexey.dubchak+autosilent90988@staff.dev'
+        const password = 123456
         loginPage.signin();
         loginPage.visibilityLogin();
-        loginPage.login();
+        loginPage.login(email, password);
         const dashboardMenu = $('button[aria-label="Dashboard"] > span');
             browser.waitUntil(function(){
                 return dashboardMenu.isDisplayed()

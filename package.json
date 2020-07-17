@@ -14,17 +14,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.10.1",
-    "@babel/preset-env": "^7.10.1",
-    "@babel/register": "^7.10.1",
-    "@wdio/cli": "^6.1.14",
-    "@wdio/local-runner": "^6.1.14",
-    "@wdio/mocha-framework": "^6.1.14",
-    "@wdio/spec-reporter": "^6.1.14",
-    "@wdio/sync": "^6.1.14",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.5",
+    "@wdio/cli": "^6.3.0",
+    "@wdio/local-runner": "^6.3.0",
+    "@wdio/mocha-framework": "^6.3.0",
+    "@wdio/spec-reporter": "^6.3.0",
+    "@wdio/sync": "^6.3.0",
     "chai": "^4.2.0",
-    "chromedriver": "^83.0.0",
+    "chromedriver": "^84.0.0",
     "wdio-chromedriver-service": "^6.0.3"
   }
 }

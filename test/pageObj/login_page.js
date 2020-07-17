@@ -1,10 +1,8 @@
 import {LoginSelectors} from './fragments';
 
 export class LoginPage extends LoginSelectors{
-    constructor(email, password){
+    constructor(){
         super();
-        this.email = email;
-        this.password = password;
     }
 
     signin(){
@@ -26,9 +24,15 @@ export class LoginPage extends LoginSelectors{
             }, 7000, 'password field is not rendered yet');
     }
 
-    login(){
-        this.emailField.setValue(this.email);
-        this.passwordField.setValue(this.password);
+    login(email, password){
+        this.emailField.setValue(email);
+        this.passwordField.setValue(password);
         this.submitButton.click();
+    }
+    errorFieldVisible(){
+        const errorBlock = this.errorBlock
+        browser.waitUntil(() => {
+            return errorBlock.isDisplayed()
+        }, 3000, 'Error block is not visible')
     }
 }

@@ -2,13 +2,15 @@ import {assert} from 'chai';
 import {LoginPage, MenuPage} from '../pageObj';
 
 describe('Checking Menu pages', function(){
-        const loginPage = new LoginPage('alexey.dubchak+autosilent90988@staff.dev', 123456);
+        const loginPage = new LoginPage();
         const menuPage = new MenuPage();
 
     it('should check individual menu', function(){
+        const email = 'alexey.dubchak+autosilent90988@staff.dev'
+        const password = 123456
         loginPage.signin();
         loginPage.visibilityLogin();
-        loginPage.login();
+        loginPage.login(email, password);
         menuPage.dashboardMenu();
         menuPage.dashboardMenuIndividual();
         const currentUrl = browser.getUrl();
